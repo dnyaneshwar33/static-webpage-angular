@@ -1,0 +1,32 @@
+<p>data-binding works!</p>
+
+<div>
+    <p>
+        <input type="{{inputType}}"  [value]="inputValue">   
+        <!-- String interpolation and property binding -->
+    </p>
+</div>
+
+<div>
+  
+    <h2>{{courseName}}</h2>
+
+    <input type="text" [value]="courseName">
+    <h1>{{firstName()}}</h1>
+    <!-- accessing signals by using this syntax() -->
+
+    <button (click)="onChangeCourse()" class="btn btn-primary mb-3">Change course</button>
+ 
+</div>
+
+<div>
+    <button (click)="onEventBind('welcome boy')" class="btn btn-primary mb-3" > click Me</button>
+    <!-- event binding sending data from html to ts -->
+</div>
+
+<div>
+    <input type="text" [(ngModel)]="courseName">
+    <!-- this is twoway binding using ngModel -it should be used with input -->
+</div>
+
+

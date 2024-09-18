@@ -1,0 +1,51 @@
+<div class="row mt-5">
+    <div class="col-3">
+        Original Value- {{firstName}}
+
+        <br>
+        After The pipe- {{firstName | uppercase}}
+
+    </div>
+    <div class="col-3">
+        Original Value-{{lastName}}
+
+        <br>
+        After The pipe-{{lastName | lowercase}}
+    </div>
+    <div class="col-3">
+        Original Value- {{firstName +' '+ lastName}}
+
+        <br>
+        After The pipe-{{firstName +' '+ lastName | titlecase}}
+    </div>
+    <div class="col-3">
+        Original Value- {{date}}
+
+        <br>
+        After The pipe-{{date | date}}
+    </div>
+    <div class="col-3">
+        Original Value- {{date}}
+
+        <br>
+        After The pipe-{{date | date:'dd-mm-yy'}}
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-3">
+        Original Value-{{students}}
+        <br>
+        After Pipe-{{students | json}}
+    </div>
+    <div class="col-3">
+        Original Value-{{currentTime}}
+        <br>
+        After Pipe-{{currentTime | async | date:'hh:mm:ss'}}
+    </div>
+    <div class="col-3">
+        Original Value-{{students.state}}
+        <br>
+        After Pipe-{{students.state | custpipe}}
+    </div>
+</div>

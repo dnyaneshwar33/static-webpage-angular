@@ -1,0 +1,55 @@
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link active" routerLink="databinding">DataBinding</a>
+          </li>
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="directive">MainDir</a>
+          </li>
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="att-directive">AttrDiire</a>
+          </li>
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="ifelse">IfElse</a>
+          </li>
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="pipe">Pipe</a>
+          </li>
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="template">Template</a>
+          </li>
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="reactive">Reactive</a>
+          </li>
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="getapi">GETAPI</a>
+          </li>
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="postapi">PostAPI</a>
+          </li>
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="ngtemplate">Templates</a>
+          </li>
+          
+
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search">
+          <button class="btn btn-danger" type="button" (click)="onLogout()">Logout</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="conatiner">
+    <router-outlet/>
+    <!-- <app-alert [message]="'getapi'"></app-alert>  -->
+     <!-- from child to parent -->
+  </div>

@@ -1,0 +1,75 @@
+
+<div class="row pt-3">
+    <div class="col-3">
+        <div class=" p-3 text-center" [ngClass]="divBgColor">
+            <h4>Div -1</h4>
+
+        </div>
+        <div class="text-center p-3 m-3">
+            <button type="button" class="btn btn-primary" (click)="makeDivBlue()">Make blue</button>
+            <button type="button" class="btn btn-danger" (click)="makeDivRed()" >Make Red</button>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="bg-success p-3 text-center " [ngClass]="isDivActive ? 'bg-success' :'bg-warning' ">
+            <h4>Div -2</h4>
+        </div>
+        <div class="text-center p-3 m-3">
+            <button type="button" class="btn btn-success" (click)="toggleDivColor()" >Toggle</button>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="bg-secondary text-white p-3 text-center mb-3" >
+            <h4>Div - 3</h4>
+        </div>
+        <div class="d-flex position-relative">
+            <input type="text" class="form-control custom-input" placeholder="Input 1">
+            <input type="text" class="form-control custom-input" placeholder="Input 2">
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="bg-info p-3 text-center">
+            <h4>Div -4</h4>
+        </div>
+    </div>
+
+</div>
+ <div>
+    <button class="btn btn-primary" [routerLink]="['/directive']" >GoToDirective</button>
+ </div>
+
+<div  class="row justify-content-center">
+    <div class="col-5">
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr >
+                    <th class="bg-info">Sr.No</th>
+                    <th class="bg-info">Name</th>
+                    <th class="bg-info">City</th>
+                    <th class="bg-info">Status</th>
+                    <th class="bg-info">Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stud of students ;let SrNo=index">
+                    <td class="bg-dark-subtle">{{SrNo+1}}</td>
+                    <td class="bg-dark-subtle">{{stud.name}}</td>
+                    <td class="bg-dark-subtle">{{stud.City}}</td>
+                    <td  [ngStyle]="{'background-color':stud.isActive ? 'green' : 'red'}"> 
+                        <span *ngIf="stud.isActive" >Active</span>
+                        <span *ngIf="!stud.isActive">DeActive</span>
+                    </td>
+                    <td class="bg-dark-subtle">
+                        <div class="progress" role="progressbar" aria-label="Example with label"  aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" [ngStyle]="{'width':stud.marks +'%'}">{{stud.marks +'%'}}</div>
+                          </div>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</div>

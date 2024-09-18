@@ -1,0 +1,80 @@
+<div class="row pt-3">
+    <div class="col-3">
+        <div class="bg-danger p-3 text-center" *ngIf="isDivVisible">
+            <h4>Div -1</h4>
+
+        </div>
+        <div class="text-center p-3 m-3">
+            <button type="button" class="btn btn-primary" (click)="showDiv1()">Show </button>
+            <button type="button" class="btn btn-danger" (click)="hideDiv1()">Hide</button>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="bg-success p-3 text-center" *ngIf="isDiv2Visible">
+            <h4>Div -2</h4>
+        </div>
+        <div class="text-center p-3 m-3">
+            <button type="button" class="btn btn-success" (click)="toggleDiv()">Toggle</button>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="bg-secondary text-white p-3 text-center mb-3" *ngIf="num1Val==num2Val">
+            <h4>Div - 3</h4>
+        </div>
+        <div class="d-flex position-relative">
+            <input type="text" [(ngModel)]="num1Val" class="form-control custom-input" placeholder="Input 1">
+            <input type="text" [(ngModel)]="num2Val" class="form-control custom-input" placeholder="Input 2">
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="bg-info p-3 text-center">
+            <h4>Div -4</h4>
+        </div>
+    </div>
+
+</div>
+
+
+<button class="btn btn-success p-2 m-3" (click)="showCity()">StudentData</button>
+
+<!-- <div >
+    <ul>
+        <li *ngFor="let city of Cities">
+            {{city}}
+
+        </li>
+    </ul>
+</div> -->
+
+<div  *ngIf="doesCityVis" class="row justify-content-center">
+    <div class="col-5">
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr >
+                    <th class="bg-info">Sr.No</th>
+                    <th class="bg-info">Name</th>
+                    <th class="bg-info">City</th>
+                    <th class="bg-info">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stud of students ;let SrNo=index">
+                    <td class="bg-dark-subtle">{{SrNo+1}}</td>
+                    <td class="bg-dark-subtle">{{stud.name}}</td>
+                    <td class="bg-dark-subtle">{{stud.City}}</td>
+                    <td class="bg-dark-subtle">
+                        <span *ngIf="! stud.isActive">NotActive</span>
+                        <span *ngIf="stud.isActive">Active
+                            
+                        </span>
+                     
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</div>

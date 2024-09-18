@@ -1,0 +1,19 @@
+
+
+@if(isDivVisible){
+    <div class="bg-success p-3 text-center ">
+        <h4>Div -2</h4>
+    </div>
+}@else{
+    <div class="bg-warning p-3 text-center ">
+        <h4>Div -2</h4>
+    </div>
+
+}
+
+<div class="col-3">
+   
+    <div class="text-center p-3 m-3">
+        <button type="button" class="btn btn-success" (click)="toggleDivColor()" >Toggle</button>
+    </div>
+</div>
